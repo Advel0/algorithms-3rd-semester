@@ -212,30 +212,40 @@ game = Game()
 
 # ]
 
-game.shuffle_queens()
+# game.shuffle_queens()
+
+# print("BFS Search:")
+# game.showField(game.queens)
+# t0 = time.time()
+# q =game.findSolution_BFS_with_limits()
+# print('time: ', time.time()-t0)
+# game.showField(game.queens)
+
+
+# print('-----')
+
+
+game.queens = [
+    (5,0),
+    (6,1),
+    (2,2),
+    (7,3),
+    (3,4),
+    (3,5),
+    (1,6),
+    (6,7)
+]
+# game.shuffle_queens()
 
 print("BFS Search:")
 game.showField(game.queens)
 t0 = time.time()
-game.findSolution_BFS_with_limits()
+game.findSolution_BFS()
 print('time: ', time.time()-t0)
 game.showField(game.queens)
 
+print('---')
 
-print('-----')
-
-
-# game.queens = [
-#     (5,0),
-#     (6,1),
-#     (2,2),
-#     (7,3),
-#     (3,4),
-#     (3,5),
-#     (1,6),
-#     (6,7)
-# ]
-game.shuffle_queens()
 
 print("RBFS Search:")
 game.showField(game.queens)
